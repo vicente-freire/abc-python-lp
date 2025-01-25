@@ -51,13 +51,7 @@ body {
 /*
   background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   */
-.header h1 {
-	font-size: 2.5rem;
-}
 
-.header p {
-	font-size: 1.2rem;
-}
 
 .btn-primary {
 	display: inline-block;
@@ -121,4 +115,61 @@ body {
 
 .footer p {
 	margin: 5px 0;
+}
+
+.logo-img {
+	width: 5rem;
+}
+
+.whatsapp-number {
+	color: #39d353;
+}
+
+@media screen and (max-width: 768px) {
+	.header {
+		height: 100%;
+		padding: 1rem 1rem;
+	}
+
+	.logo-img {
+		width: 5rem;
+	}
+
+	.call-to-action {
+		align-items: center;
+		justify-content: start;
+		height: 100%;
+		margin: 5rem 2rem;
+		padding: 5rem 0 ;
+
+		.text {
+			width: 50%;
+			height: 100%;
+			text-align: start;
+
+			h1 {
+				font-size: 42pt;
+			}
+
+			p {
+				font-size: 20pt;
+			}
+
+			a {
+				font-size: 10pt;
+				margin-top: 0;
+			}
+		}
+
+		.p-logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: auto;
+		.python-logo {
+			width: 50%;
+		}
+	}
+		}
+
 }
