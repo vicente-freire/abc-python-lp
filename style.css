@@ -11,47 +11,68 @@ body {
 	padding: 0;
 	color: #333;
 	line-height: 1.6;
+	overflow-x: hidden;
 }
 
-
 .header {
-	background: linear-gradient(180deg, var(--primary-color) 20%, var(--secondary-color));
+	background: linear-gradient(
+		180deg,
+		var(--primary-color) 20%,
+		var(--secondary-color)
+	);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 1rem;
 	height: 15dvh;
-
-	.social a {
-		text-decoration: none;
-		margin: 0.5rem;
+	a {
+		margin: 0;
 	}
 }
 
 .call-to-action {
-	width: 90%;
-	max-width: 1200px;
-	margin: 0 auto;
-	height: 80dvh;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	.image {
+		display: flex;
+		justify-content: flex-end;
+		max-width: 100%;
+
+		.python-logo {
+			width: 250px;
+			margin-right: 10rem;
+		}
+
+		.background-prof {
+			position: absolute;
+			bottom: -3rem;
+			right: 2rem;
+			overflow: hidden;
+			z-index: -1;
+			transform: rotate(-25deg) scale(3);
+			filter: opacity(.2);
+		}
+	}
 
 	.text {
-		width: 50%;
-
+		width: 100%;
+		margin-left: 5rem;
+		align-self: center;
+		ul {
+			columns: 2;
+			li {
+				font-size: 15pt;
+			}
+		}
 		h1 {
-			font-size: 42pt;
+			font-size: 32pt;
 			line-height: 1;
 			color: var(--primary-color);
 		}
 	}
 }
-
-/*
-  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-  */
-
 
 .btn-primary {
 	display: inline-block;
@@ -78,25 +99,26 @@ body {
 
 .section-about,
 .section-features {
-	padding: 40px 20px;
+	padding: 10px 20px;
 }
 
-.section-about ul,
-.section-features ul {
+ul {
 	list-style-type: none;
 	padding: 0;
-}
-
-.section-about ul li,
-.section-features ul li {
-	background: url("check-icon.png") no-repeat left center;
-	background-size: 20px;
-	padding-left: 30px;
-	margin-bottom: 10px;
+	li {
+		background: url("check-icon.png") no-repeat left center;
+		background-size: 20px;
+		padding-left: 30px;
+		margin-bottom: 10px;
+	}
 }
 
 .section-cta {
-	background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+	background: linear-gradient(
+		180deg,
+		var(--primary-color),
+		var(--secondary-color)
+	);
 	color: #fff;
 	text-align: center;
 	padding: 50px 20px;
@@ -104,6 +126,10 @@ body {
 
 .section-cta .btn-primary {
 	background: #0f2027;
+}
+
+.close-p p {
+	margin: 0;
 }
 
 .footer {
@@ -136,19 +162,21 @@ body {
 	}
 
 	.call-to-action {
-		align-items: center;
-		justify-content: start;
+		display: flex;
+		flex-direction: column;
 		height: 100%;
-		margin: 5rem 2rem;
-		padding: 5rem 0 ;
+		margin: 0;
+		padding: 0 2rem;
+		width: fit-content;
 
 		.text {
-			width: 50%;
+			width: 100%;
 			height: 100%;
 			text-align: start;
+			margin-left: 0;
 
 			h1 {
-				font-size: 42pt;
+				font-size: 24pt;
 			}
 
 			p {
@@ -161,15 +189,8 @@ body {
 			}
 		}
 
-		.p-logo {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: auto;
 		.python-logo {
-			width: 50%;
+			display: none;
 		}
 	}
-		}
-
 }
