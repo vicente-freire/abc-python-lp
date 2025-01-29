@@ -12,6 +12,7 @@ body {
 	color: #333;
 	line-height: 1.6;
 	overflow-x: hidden;
+	background-color: #fbfcf3;
 }
 
 .header {
@@ -30,6 +31,32 @@ body {
 	}
 }
 
+.header,
+.call-to-action,
+.section-highlight,
+.section-about,
+.section-features,
+.section-cta,
+.footer {
+	z-index: 1;
+}
+
+.parallax {
+	position: fixed;
+	bottom: -5%;
+	right: -5%;
+	z-index: -1;
+}
+
+.background-prof {
+	position: absolute;
+	bottom: -3rem;
+	right: 2rem;
+	overflow: hidden;
+	transform: rotate(-25deg) scale(3);
+	filter: opacity(0.1);
+}
+
 .call-to-action {
 	width: 100%;
 	display: grid;
@@ -43,16 +70,6 @@ body {
 		.python-logo {
 			width: 250px;
 			margin-right: 10rem;
-		}
-
-		.background-prof {
-			position: absolute;
-			bottom: -3rem;
-			right: 2rem;
-			overflow: hidden;
-			z-index: -1;
-			transform: rotate(-25deg) scale(3);
-			filter: opacity(.2);
 		}
 	}
 
@@ -124,6 +141,12 @@ ul {
 	padding: 50px 20px;
 }
 
+.section-something {
+	display: flex;
+	justify-content: space-evenly;
+	font-size: 16pt;
+}
+
 .section-cta .btn-primary {
 	background: #0f2027;
 }
@@ -192,5 +215,9 @@ ul {
 		.python-logo {
 			display: none;
 		}
+	}
+	.section-something {
+		flex-direction: column;
+		font-size: 14pt;
 	}
 }
